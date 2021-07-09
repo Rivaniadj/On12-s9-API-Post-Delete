@@ -1,15 +1,15 @@
 const express = require("express");
+
 const app = express();
 
 const index = require("./routes/index")
-const tasks = require("./routes/toDoRoutes");
+const contacts = require("./routes/casaRoutes");
 
 
 app.use(express.json());
 
 app.use("/", index)
-app.use("/tarefas", tasks);
+app.use("/contatos", contacts);
 
 module.exports = app;
-
 
